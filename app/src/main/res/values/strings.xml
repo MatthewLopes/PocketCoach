@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">PocketCoach</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_data">Data</string>
+    <string name="title_gyms">Gyms</string>
+    <string name="title_social">Social</string>
+    <string name="title_workout">Workouts</string>
 </resources>
