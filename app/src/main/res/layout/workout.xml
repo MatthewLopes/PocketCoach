@@ -40,4 +40,15 @@
         android:layout_below="@+id/button3"
         android:layout_marginTop="26dp"
         android:text="Calisthenics" />
-</RelativeLayout>
+
+    </RelativeLayout>
+
+        <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+    </LinearLayout>
