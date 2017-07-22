@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.WorkoutFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="Pre-Set Workout" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignStart="@+id/button"
+            android:layout_below="@+id/button"
+            android:layout_marginTop="23dp"
+            android:text="Create Your Own Workout" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignStart="@+id/button2"
+            android:layout_below="@+id/button2"
+            android:layout_marginTop="25dp"
+            android:text="Workout Classes" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_alignStart="@+id/button3"
+            android:layout_below="@+id/button3"
+            android:layout_marginTop="26dp"
+            android:text="Calisthenics" />
+    </RelativeLayout>
+
+</FrameLayout>
