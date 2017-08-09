@@ -9,17 +9,17 @@
             android:layout_height="match_parent">>
 
                 <Button
-                    android:id="@+id/button11"
+                    android:id="@+id/ContactButton"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_alignLeft="@+id/button8"
-                    android:layout_alignStart="@+id/button8"
-                    android:layout_below="@+id/button8"
-                    android:layout_marginTop="38dp"
+                    android:layout_alignLeft="@+id/StoreButton"
+                    android:layout_alignStart="@+id/StoreButton"
+                    android:layout_below="@+id/StoreButton"
+                    android:layout_marginTop="24dp"
                     android:text="Contact" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/ClassesButton"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_alignParentLeft="true"
@@ -31,51 +31,55 @@
                     android:text="Classes" />
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/HoursButton"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_alignTop="@+id/button5"
+                    android:text="Hours"
+                    android:layout_below="@+id/TrainerButton"
+                    android:layout_alignLeft="@+id/TrainerButton"
+                    android:layout_alignStart="@+id/TrainerButton"
+                    android:layout_marginTop="24dp" />
+
+                <Button
+                    android:id="@+id/GymKeyButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="Gym Key"
+                    android:layout_below="@+id/MapButton"
+                    android:layout_alignLeft="@+id/MapButton"
+                    android:layout_alignStart="@+id/MapButton"
+                    android:layout_marginTop="24dp" />
+
+                <Button
+                    android:id="@+id/StoreButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="Store"
+                    android:layout_below="@+id/TrainerButton"
+                    android:layout_alignLeft="@+id/ClassesButton"
+                    android:layout_alignStart="@+id/ClassesButton"
+                    android:layout_marginTop="24dp" />
+
+                <Button
+                    android:id="@+id/TrainerButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="Trainer"
+                    android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:text="Hours" />
+                    android:layout_marginTop="38dp" />
 
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/MapButton"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_alignParentEnd="true"
+                    android:text="Map"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignTop="@+id/button6"
-                    android:layout_marginEnd="22dp"
-                    android:layout_marginRight="22dp"
-                    android:text="Gym Key" />
-
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_alignLeft="@+id/button5"
-                    android:layout_alignStart="@+id/button5"
-                    android:layout_below="@+id/button5"
-                    android:layout_marginTop="44dp"
-                    android:text="Store" />
-
-                <Button
-                    android:id="@+id/button9"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_alignLeft="@+id/button6"
-                    android:layout_alignStart="@+id/button6"
-                    android:layout_alignTop="@+id/button8"
-                    android:text="Trainer" />
-
-                <Button
-                    android:id="@+id/button10"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_alignLeft="@+id/button7"
-                    android:layout_alignStart="@+id/button7"
-                    android:layout_alignTop="@+id/button9"
-                    android:text="Map" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="38dp" />
 
         </RelativeLayout>
 </FrameLayout>
