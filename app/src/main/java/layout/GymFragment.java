@@ -38,6 +38,7 @@ public class GymFragment extends Fragment implements View.OnClickListener{
     }
 
     //When view is created, it creates a listener for each button
+    //**Remember to implement view.OnClickListener in the fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gym, container, false);
@@ -45,6 +46,30 @@ public class GymFragment extends Fragment implements View.OnClickListener{
         //Sets an onCLick Listener for contactButton
         Button contactButton = (Button)  view.findViewById(R.id.ContactButton);
         contactButton.setOnClickListener(this);
+
+        //Sets an onCLick Listener for hoursButton
+        Button hoursButton = (Button)  view.findViewById(R.id.HoursButton);
+        hoursButton.setOnClickListener(this);
+
+        //Sets an onCLick Listener for trainerButton
+        Button trainerButton = (Button)  view.findViewById(R.id.TrainerButton);
+        trainerButton.setOnClickListener(this);
+
+        //Sets an onCLick Listener for mapButton
+        Button mapButton = (Button)  view.findViewById(R.id.MapButton);
+        mapButton.setOnClickListener(this);
+
+        //Sets an onCLick Listener for storeButton
+        Button storeButton = (Button)  view.findViewById(R.id.StoreButton);
+        storeButton.setOnClickListener(this);
+
+        //Sets an onCLick Listener for gymKeyButton
+        Button gymKeyButton = (Button)  view.findViewById(R.id.GymKeyButton);
+        gymKeyButton.setOnClickListener(this);
+
+        //Sets an onCLick Listener for classesButton
+        Button classesButton = (Button)  view.findViewById(R.id.ClassesButton);
+        classesButton.setOnClickListener(this);
 
         return view;
     }
@@ -57,6 +82,24 @@ public class GymFragment extends Fragment implements View.OnClickListener{
         switch(id){
             case R.id.ContactButton:
                 fragment = new ContactFragment();
+                switchFragment(fragment);
+            case R.id.HoursButton:
+                fragment = new HoursFragment();
+                switchFragment(fragment);
+            case R.id.TrainerButton:
+                fragment = new TrainerFragment();
+                switchFragment(fragment);
+            case R.id.MapButton:
+                fragment = new MapFragment();
+                switchFragment(fragment);
+            case R.id.StoreButton:
+                fragment = new StoreFragment();
+                switchFragment(fragment);
+            case R.id.GymKeyButton:
+                fragment = new GymKeyFragment();
+                switchFragment(fragment);
+            case R.id.ClassesButton:
+                fragment = new ClassesFragment();
                 switchFragment(fragment);
         }
     }
