@@ -83,24 +83,31 @@ public class GymFragment extends Fragment implements View.OnClickListener{
             case R.id.ContactButton:
                 fragment = new ContactFragment();
                 switchFragment(fragment);
+                break;
             case R.id.HoursButton:
                 fragment = new HoursFragment();
                 switchFragment(fragment);
+                break;
             case R.id.TrainerButton:
                 fragment = new TrainerFragment();
                 switchFragment(fragment);
+                break;
             case R.id.MapButton:
                 fragment = new MapFragment();
                 switchFragment(fragment);
+                break;
             case R.id.StoreButton:
                 fragment = new StoreFragment();
                 switchFragment(fragment);
+                break;
             case R.id.GymKeyButton:
                 fragment = new GymKeyFragment();
                 switchFragment(fragment);
+                break;
             case R.id.ClassesButton:
                 fragment = new ClassesFragment();
                 switchFragment(fragment);
+                break;
         }
     }
 
