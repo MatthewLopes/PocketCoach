@@ -5,13 +5,20 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import org.json.JSONException;
+import org.json.JSONObject;
+import java.io.IOException;
+import java.io.InputStream;
 import layout.DataFragment;
 import layout.GymFragment;
+import layout.MapFragment;
 import layout.ProfileFragment;
 import layout.SocialFragment;
 import layout.WorkoutFragment;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
             manager = getSupportFragmentManager();
+            //Log.d("BUTTONTEST", "ERNjehj");
             switch (item.getItemId()) {
                 case R.id.navigation_social:
                     SocialFragment socialFragment = new SocialFragment();
@@ -53,10 +61,40 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
+    public String loadFromJson(){
+        String json = null;
+        try {
+
+            InputStream input = getAssets().open("Food.json");
+
+            int size = input.available();
+
+            byte[] buffer = new byte[size];
+
+            input.read(buffer);
+            input.close();
+
+            json = new String(buffer, "UTF-8");
+            JSONObject obj = new JSONObject(json);
+            Log.d("Caleb", obj.toString());
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return json;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //loadFromJson();
+
 
         //This code sets the default starting fragment to the profile page so that the first page
         //The user sees is the profile page.
@@ -71,4 +109,9 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
 }

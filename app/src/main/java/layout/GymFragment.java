@@ -3,10 +3,16 @@ package layout;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.matthewlopes.pocketcoach.R;
 
@@ -18,20 +24,51 @@ import com.example.matthewlopes.pocketcoach.R;
  * Use the {@link GymFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class GymFragment extends Fragment {
+public class GymFragment extends Fragment implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    private OnFragmentInteractionListener mListener;
-
     public GymFragment() {
         // Required empty public constructor
+    }
+
+    //When view is created, it creates a listener for each button
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_gym, container, false);
+
+        //Sets an onCLick Listener for contactButton
+        Button contactButton = (Button)  view.findViewById(R.id.ContactButton);
+        contactButton.setOnClickListener(this);
+
+        return view;
+    }
+
+    //Responds to a click on a button
+    @Override
+    public void onClick(View view) {
+        Fragment fragment;
+        int id = view.getId();
+        switch(id){
+            case R.id.ContactButton:
+                fragment = new ContactFragment();
+                switchFragment(fragment);
+        }
+    }
+
+    //Used to switch Fragments
+    //**Remember to remove the onAttatch method in the fragments
+    public void switchFragment(Fragment fragment){
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contentLayout,fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     /**
@@ -59,26 +96,6 @@ public class GymFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gym, container, false);
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
     }
 
     /**
