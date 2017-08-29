@@ -26,5 +26,18 @@
         android:layout_toRightOf="@+id/toggleButton"
         android:text="Buddies" />
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toggleButton">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
     </RelativeLayout>
 </FrameLayout>

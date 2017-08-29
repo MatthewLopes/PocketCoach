@@ -4,34 +4,93 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.matthewlopes.pocketcoach.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link WorkoutFragment.OnFragmentInteractionListener} interface
+ * {@link GymFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link WorkoutFragment#newInstance} factory method to
+ * Use the {@link GymFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class WorkoutFragment extends Fragment {
+public class WorkoutFragment extends Fragment implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    private OnFragmentInteractionListener mListener;
-
     public WorkoutFragment() {
         // Required empty public constructor
+    }
+
+    //When view is created, it creates a listener for each button
+    //**Remember to implement view.OnClickListener in the fragment
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_workout, container, false);
+
+        //Sets an onCLick Listener for contactButton
+        Button preSetWorkoutButton = (Button)  view.findViewById(R.id.PreSetWorkoutButton);
+        preSetWorkoutButton.setOnClickListener(this);
+
+        //Sets an onCLick Listener for hoursButton
+        Button createYourOwnWorkoutButton = (Button)  view.findViewById(R.id.CreateYourOwnWorkoutButton);
+        createYourOwnWorkoutButton.setOnClickListener(this);
+
+        //Sets an onCLick Listener for trainerButton
+        Button calisthenicsButton = (Button)  view.findViewById(R.id.CalistenicsButton);
+        calisthenicsButton.setOnClickListener(this);
+
+        //Sets an onCLick Listener for mapButton
+        Button workoutClassesButton = (Button)  view.findViewById(R.id.WorkoutClassesButton);
+        workoutClassesButton.setOnClickListener(this);
+
+        return view;
+    }
+
+    //Responds to a click on a button
+    @Override
+    public void onClick(View view) {
+        Fragment fragment;
+        int id = view.getId();
+        switch(id){
+            case R.id.PreSetWorkoutButton:
+                fragment = new PreSetWorkoutFragment();
+                switchFragment(fragment);
+                break;
+            case R.id.CalistenicsButton:
+                fragment = new CalisthenicsFragment();
+                switchFragment(fragment);
+                break;
+            case R.id.CreateYourOwnWorkoutButton:
+                fragment = new CreateYourOwnWorkoutFragment();
+                switchFragment(fragment);
+                break;
+            case R.id.WorkoutClassesButton:
+                fragment = new WorkoutClassesFragment();
+                switchFragment(fragment);
+        }
+    }
+
+    //Used to switch Fragments
+    //**Remember to remove the onAttatch method in the fragments
+    public void switchFragment(Fragment fragment){
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contentLayout,fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     /**
@@ -40,7 +99,7 @@ public class WorkoutFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment WorkoutFragment.
+     * @return A new instance of fragment GymFragment.
      */
     // TODO: Rename and change types and number of parameters
     public static WorkoutFragment newInstance(String param1, String param2) {
@@ -59,26 +118,6 @@ public class WorkoutFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_workout, container, false);
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
     }
 
     /**
