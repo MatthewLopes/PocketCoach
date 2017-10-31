@@ -10,41 +10,46 @@
 
         <Button
             android:id="@+id/PreSetWorkoutButton"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="17dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
             android:text="Pre-Set Workout" />
 
         <Button
             android:id="@+id/CreateYourOwnWorkoutButton"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_alignLeft="@+id/PreSetWorkoutButton"
             android:layout_alignStart="@+id/PreSetWorkoutButton"
             android:layout_below="@+id/PreSetWorkoutButton"
-            android:layout_marginTop="23dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
             android:text="Create Your Own Workout" />
 
         <Button
             android:id="@+id/WorkoutClassesButton"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_alignLeft="@+id/CreateYourOwnWorkoutButton"
             android:layout_alignStart="@+id/CreateYourOwnWorkoutButton"
             android:layout_below="@+id/CreateYourOwnWorkoutButton"
-            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
             android:text="Workout Classes" />
 
         <Button
             android:id="@+id/CalistenicsButton"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_alignLeft="@+id/WorkoutClassesButton"
             android:layout_alignStart="@+id/WorkoutClassesButton"
             android:layout_below="@+id/WorkoutClassesButton"
-            android:layout_marginTop="26dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
             android:text="Calisthenics" />
     </RelativeLayout>
 

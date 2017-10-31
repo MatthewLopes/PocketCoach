@@ -16,7 +16,7 @@
         <RelativeLayout
             android:id="@+id/profileLayout"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
+            android:layout_height="310dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
@@ -30,12 +30,12 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Username"
-                android:textSize="25sp" />
+                android:textSize="40sp" />
 
             <ImageView
                 android:id="@+id/profilePicture"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
                 android:layout_alignLeft="@+id/usernameText3"
                 android:layout_below="@+id/usernameText3"
                 android:src="@drawable/ic_profilepic" />
@@ -43,20 +43,19 @@
             <ProgressBar
                 android:id="@+id/progressBar"
                 style="?android:attr/progressBarStyle"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_alignTop="@+id/profilePicture"
                 android:layout_marginLeft="50dp"
                 android:layout_toEndOf="@+id/profilePicture"
-                android:layout_toRightOf="@+id/profilePicture"
-                android:progress="30" />
+                android:layout_toRightOf="@+id/profilePicture" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/experienceLayout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_below="@+id/profileLayout"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -77,17 +76,17 @@
                 android:layout_marginTop="9dp"
                 android:gravity="center"
                 android:text="Level 1"
-                android:textSize="18sp" />
+                android:textSize="25sp" />
 
             <ProgressBar
                 android:id="@+id/experienceBar"
                 style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/levelText"
                 android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_toEndOf="@+id/levelText"
                 android:layout_toRightOf="@+id/levelText"
                 android:progress="30" />
@@ -96,7 +95,7 @@
         <RelativeLayout
             android:id="@+id/badgeLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_below="@+id/experienceLayout"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -114,7 +113,7 @@
 
                     <ImageButton
                         android:id="@+id/badgeButton1"
-                        android:layout_width="80dp"
+                        android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginTop="15dp"
@@ -124,7 +123,7 @@
 
                     <ImageButton
                         android:id="@+id/badgeButton2"
-                        android:layout_width="80dp"
+                        android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginTop="15dp"
@@ -134,7 +133,7 @@
 
                     <ImageButton
                         android:id="@+id/badgeButton3"
-                        android:layout_width="80dp"
+                        android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginTop="15dp"
@@ -144,7 +143,7 @@
 
                     <ImageButton
                         android:id="@+id/badgeButton4"
-                        android:layout_width="80dp"
+                        android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginTop="15dp"
@@ -154,13 +153,14 @@
 
                     <ImageButton
                         android:id="@+id/badgeButton5"
-                        android:layout_width="80dp"
+                        android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
                         android:scaleType="fitStart"
                         android:src="@android:drawable/btn_star_big_on" />
+
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -189,7 +189,7 @@
 
                     <ImageButton
                         android:id="@+id/buddyButton1"
-                        android:layout_width="115dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginLeft="10dp"
@@ -200,7 +200,7 @@
 
                     <ImageButton
                         android:id="@+id/buddyButton2"
-                        android:layout_width="115dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginTop="15dp"
@@ -210,7 +210,7 @@
 
                     <ImageButton
                         android:id="@+id/buddyButton3"
-                        android:layout_width="115dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginTop="15dp"
@@ -220,7 +220,7 @@
 
                     <ImageButton
                         android:id="@+id/buddyButton4"
-                        android:layout_width="115dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginTop="15dp"
@@ -230,7 +230,7 @@
 
                     <ImageButton
                         android:id="@+id/buddyButton5"
-                        android:layout_width="115dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
                         android:layout_marginTop="15dp"

@@ -26,13 +26,13 @@
             android:text="670 Calories Left"
             android:textAlignment="center"
             android:textColor="?android:attr/colorAccent"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="100dp"
-            android:layout_marginTop="70dp">
+            android:layout_marginTop="100dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,12 +48,12 @@
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
                     android:text="Food"
-                    android:textSize="25sp" />
+                    android:textSize="40sp" />
 
                 <LinearLayout
                     android:id="@+id/foodLayout1"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="40dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -62,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Food Name"
-                        android:textSize="15sp" />
+                        android:textSize="30sp" />
 
                     <TextView
                         android:id="@+id/calorieAmountText1"
@@ -72,13 +72,13 @@
                         android:layout_weight="1"
                         android:text="Calories"
                         android:textAlignment="textEnd"
-                        android:textSize="15sp" />
+                        android:textSize="30sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/foodLayout2"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="40dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -87,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Food Name"
-                        android:textSize="15sp" />
+                        android:textSize="30sp" />
 
                     <TextView
                         android:id="@+id/calorieAmountText2"
@@ -97,13 +97,13 @@
                         android:layout_weight="1"
                         android:text="Calories"
                         android:textAlignment="textEnd"
-                        android:textSize="15sp" />
+                        android:textSize="30sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/foodLayout3"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="40dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -112,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Food Name"
-                        android:textSize="15sp" />
+                        android:textSize="30sp" />
 
                     <TextView
                         android:id="@+id/calorieAmountText3"
@@ -122,7 +122,7 @@
                         android:layout_weight="1"
                         android:text="Calories"
                         android:textAlignment="textEnd"
-                        android:textSize="15sp" />
+                        android:textSize="30sp" />
                 </LinearLayout>
 
             </LinearLayout>

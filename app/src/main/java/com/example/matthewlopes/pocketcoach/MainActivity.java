@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         String json = null;
         try {
 
-            InputStream input = getAssets().open("Food.json");
+            InputStream input = getAssets().open("Food");
 
             int size = input.available();
 
@@ -77,7 +79,11 @@ public class MainActivity extends AppCompatActivity {
 
             json = new String(buffer, "UTF-8");
             JSONObject obj = new JSONObject(json);
-            Log.d("Caleb", obj.toString());
+            obj.names();
+
+            //JSONObject test = obj.getJSONObject("foods");
+
+            //Log.d("Caleb", test.toString());
 
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -93,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //loadFromJson();
+        loadFromJson();
 
 
         //This code sets the default starting fragment to the profile page so that the first page

@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,38 +7,254 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">>
+        android:layout_height="match_parent"
+        android:background="#d9d9d9"><![CDATA[>
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4"
-        android:text="Gym" />
 
-    <ToggleButton
-        android:id="@+id/toggleButton2"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_toEndOf="@+id/toggleButton"
-        android:layout_toRightOf="@+id/toggleButton"
-        android:text="Buddies" />
+
+
+
+
+
+        ]]>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/socialTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            app:tabGravity="fill">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/messagesTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Messages" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/socialTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Social" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/leaderboardTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leaderboard" />
+        </android.support.design.widget.TabLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/filterTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/socialTabLayout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/background_light"
+            app:tabGravity="fill">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/buddiesTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buddies" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/gymTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gym" />
+        </android.support.design.widget.TabLayout>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/toggleButton">
+            android:layout_below="@+id/filterTabLayout">
 
-            <RelativeLayout
+            <LinearLayout
+                android:id="@+id/postLinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
+                android:orientation="vertical">
 
+                <RelativeLayout
+                    android:id="@+id/postLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/background_light">
+
+                    <ImageView
+                        android:id="@+id/postProfileImage1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_profilepic" />
+
+                    <TextView
+                        android:id="@+id/usernameText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/postProfileImage1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/postProfileImage1"
+                        android:autoText="true"
+                        android:text="Username"
+                        android:textColor="@color/bb_darkBackgroundColor" />
+
+                    <TextView
+                        android:id="@+id/commentText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/usernameText1"
+                        android:layout_below="@+id/usernameText1"
+                        android:autoText="true"
+                        android:text="Comment comment comment comment comment comment comment comment comment comment." />
+
+                    <Button
+                        android:id="@+id/likeButton1"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_alignLeft="@+id/usernameText1"
+                        android:layout_below="@+id/commentText1"
+                        android:text="Like"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/commentButton1"
+                        android:layout_width="65dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/commentText1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/likeButton1"
+                        android:text="Comment"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/background_light">
+
+                    <ImageView
+                        android:id="@+id/postProfileImage2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_friend2" />
+
+                    <TextView
+                        android:id="@+id/usernameText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/postProfileImage2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/postProfileImage2"
+                        android:autoText="true"
+                        android:text="Username"
+                        android:textColor="@color/bb_darkBackgroundColor" />
+
+                    <TextView
+                        android:id="@+id/commentText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/usernameText2"
+                        android:layout_below="@+id/usernameText2"
+                        android:autoText="true"
+                        android:text="Comment comment comment comment comment comment comment comment comment comment." />
+
+                    <Button
+                        android:id="@+id/likeButton2"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_alignLeft="@+id/usernameText2"
+                        android:layout_below="@+id/commentText2"
+                        android:text="Like"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/commentButton2"
+                        android:layout_width="65dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/commentText2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/likeButton2"
+                        android:text="Comment"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/background_light">
+
+                    <ImageView
+                        android:id="@+id/postProfileImage3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_friend1" />
+
+                    <TextView
+                        android:id="@+id/usernameText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/postProfileImage3"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/postProfileImage3"
+                        android:autoText="true"
+                        android:text="Username"
+                        android:textColor="@color/bb_darkBackgroundColor" />
+
+                    <TextView
+                        android:id="@+id/commentText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/usernameText3"
+                        android:layout_below="@+id/usernameText3"
+                        android:autoText="true"
+                        android:text="Comment comment comment comment comment comment comment comment comment comment." />
+
+                    <Button
+                        android:id="@+id/likeButton3"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_alignLeft="@+id/commentText3"
+                        android:layout_below="@+id/commentText3"
+                        android:text="Like"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/commentButton3"
+                        android:layout_width="65dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/commentText3"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/likeButton3"
+                        android:text="Comment"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 </FrameLayout>
