@@ -1,85 +1,95 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="layout.GymFragment">
 
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_gym" />
+
         <RelativeLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">>
+            android:layout_height="400dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">>
+
 
                 <Button
                     android:id="@+id/ContactButton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_alignLeft="@+id/StoreButton"
-                    android:layout_alignStart="@+id/StoreButton"
-                    android:layout_below="@+id/StoreButton"
-                    android:layout_marginTop="24dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignStart="@+id/GymKeyButton"
+                    android:layout_below="@+id/GymKeyButton"
+                    android:layout_marginTop="15dp"
                     android:text="Contact" />
 
                 <Button
                     android:id="@+id/ClassesButton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="38dp"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_above="@+id/HoursButton"
+                    android:layout_alignStart="@+id/HoursButton"
+                    android:layout_marginBottom="15dp"
                     android:text="Classes" />
 
                 <Button
                     android:id="@+id/HoursButton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="Hours"
-                    android:layout_below="@+id/TrainerButton"
-                    android:layout_alignLeft="@+id/TrainerButton"
-                    android:layout_alignStart="@+id/TrainerButton"
-                    android:layout_marginTop="24dp" />
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_alignBottom="@+id/TrainerButton"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:text="Hours" />
 
                 <Button
                     android:id="@+id/GymKeyButton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="Gym Key"
-                    android:layout_below="@+id/MapButton"
-                    android:layout_alignLeft="@+id/MapButton"
-                    android:layout_alignStart="@+id/MapButton"
-                    android:layout_marginTop="24dp" />
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Gym Key" />
 
                 <Button
                     android:id="@+id/StoreButton"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:text="Store"
-                    android:layout_below="@+id/TrainerButton"
-                    android:layout_alignLeft="@+id/ClassesButton"
+                    android:layout_above="@+id/ClassesButton"
+                    android:layout_alignEnd="@+id/ClassesButton"
                     android:layout_alignStart="@+id/ClassesButton"
-                    android:layout_marginTop="24dp" />
-
-                <Button
-                    android:id="@+id/TrainerButton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="Trainer"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="38dp" />
+                    android:layout_marginBottom="15dp"
+                    android:layout_alignTop="@+id/GymKeyButton"
+                    android:text="Store" />
 
                 <Button
                     android:id="@+id/MapButton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="Map"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="38dp" />
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignStart="@+id/ContactButton"
+                    android:layout_below="@+id/ContactButton"
+                    android:layout_marginTop="15dp"
+                    android:text="Map" />
+
+                <Button
+                    android:id="@+id/TrainerButton"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignStart="@+id/MapButton"
+                    android:layout_below="@+id/MapButton"
+                    android:layout_marginTop="15dp"
+                    android:text="Trainer" />
 
         </RelativeLayout>
-</FrameLayout>
+
+</RelativeLayout>
